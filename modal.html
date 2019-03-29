@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8">
+    <title>modal-practice</title>
+    <style type="text/css">
+      .modal{
+        display:none;
+        position:fixed;
+        z-index:1;
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+        overflow:auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+      }
+      .modal-content{
+        background-color:rgba(0, 0, 0, 0.81);
+        margin:15% auto;
+        padding: 20px;
+        border:1px solid #888;
+        width:80%;
+      }
+      .close{
+        color:#aaa;
+        float:right;
+        font-size:28px;
+        font-weight:bold;
+      }
+      .close:hover,.close:focus{
+        color:black;
+        text-decoration:none;
+        cursor:pointer;
+      }
+      #myBtn{
+        background-color: rgba(125, 80, 208,0.8);
+        border: none;
+        padding: 10px 20px;
+        font-size:20px;
+        border-radius: 20px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+      }
+      .box h1{
+        text-align: center;
+        font-size: 20px;
+        color:white;
+      }
+      .box input{
+        margin:10px auto;
+        padding:10px 20px;
+        text-align: center;
+        color:white;
+        background-color: rgba(0, 0, 0, 0.81);
+        display:block;
+        border: 2px solid #2d51bd;
+        border-radius: 24px;
+        transition: 0.4s;
+      }
+      input[type='text']:hover,input[type='text']:active{
+        padding:10px 30px;
+        background-color: rgba(#2d51bd, 0.83);
+      }
+      input[type='submit']:hover{
+        background-color: rgba(#2d51bd, 0.83);
+      }
+    </style>
+  </head>
+  <body>
+    <!--trigger/open the modal-->
+    <button id="myBtn">Open Modal</button>
+
+    <!--the modal-->
+    <div id="myModal" class="modal">
+
+      <!--Modal content-->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="login-form">
+          <form class="box" action="confirm.php" method="post">
+            <h1>半径2の球の体積、表面積を求めよ。</h1>
+            <input type="text" name="volume" value="体積">
+            <input type="text" name="surface" value="表面積">
+            <input type="submit" value="答え合わせ">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      //Get the modal
+      var modal = document.getElementById('myModal');
+
+      //Get the button that opens the Modal
+      var btn = document.getElementById("myBtn");
+
+      //Get the <span> element that closes the Modal
+      var span = document.getElementsByClassName("close")[0];
+
+      //When the user clicks on the button, open the Modal
+      btn.onclick = function(){
+        modal.style.display = "block";
+      }
+
+      //When the user clicks on <span> (x), close the Modal
+        span.onclick = function(){
+          modal.style.display = "none";
+        }
+
+      //When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event){
+        if(event.target == modal){
+          modal.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
