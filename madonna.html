@@ -12,7 +12,7 @@ crossorigin="anonymous"></script>
 <body>
 <header>
   <div class="top-container">
-    <a  href="madonna.html"><img class="rogo" src="rogo-tp.png"></a>
+    <a  href="madonna.html"><img class="rogo" src="rogo-tp.png" alt="美容室まどんな"></a>
     <ul class="menus">
       <a class="menu" href="madonna.html">メニュー</a>
       <a class="menu" href="madonna.html">アクセス</a>
@@ -42,12 +42,25 @@ crossorigin="anonymous"></script>
 </div>
 
 <div class="course-intro">
-
+  <div class="introduce">
+    <h3>美容室まどんなは<br>愛知県一宮市の美容院・美容室・ヘアサロンです。</h3>
+    <div class="bg-holder">
+      <div class="place-image">
+        <img class="rogo on" src="rogo-tp.png" alt="美容室まどんな">
+      </div>
+    </div>
+    <div class="intro-sentence">
+      <h4>お陰様で美容室まどんな は、平成を駆け抜け31周年を迎えることが出来ました。<br>新元号に向かい、一度出発点に戻り、<br>お客様の落ち着ける空間、リラックスと笑顔の提供が出来るよう、<br>この度、<span>3/13日にリニューアルOPEN</span>致しました。<br>益々クオリティの高い技術を日々勉強しお客様に喜んで頂けるよう<br>頑張ってまいりたいと思います。<br>これからも、美容室まどんなをよろしくお願い致します。<br>ご来店の際には、ぜひ当店クーポンをご利用の上、御予約、御来店<br>店員一同、心よりお待ち致しております。</h4>
+      <div class="btn-wrapper">
+        <p class="btn book">ご予約はこちら</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <footer>
   <div class="bottom-container">
-    <a  href="madonna.html"><img class="rogo" src="rogo-tp.png"></a>
+    <a  href="madonna.html"><img class="rogo" src="rogo-tp.png" alt="美容室まどんな"></a>
     <div class="snses">
         <a class="sns fab fa-instagram" target="_blank" href="https://www.instagram.com/madonna_sugi/?hl=ja"></a>
         <a class="sns fab fa-facebook-square" target="_blank" href="https://www.facebook.com/madonna.138/"></a>
@@ -58,16 +71,16 @@ crossorigin="anonymous"></script>
 <script>
 $(function(){
   //fadeIn of catchy
-  $('#catchy').fadeIn(2500,function(){
+  $('#catchy').fadeIn(2000,function(){
   $('#catchy').css('display','inline-block');
   });
   //modal show function
   $('.book').click(function(){
-    $('.modal').show();
+    $('.modal').fadeIn();
   });
   //modal close function
   $('.close').click(function(){
-    $('.modal').hide();
+    $('.modal').fadeOut();
   });
   //icon hover of sns
   $('.fab').hover(
