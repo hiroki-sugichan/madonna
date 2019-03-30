@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="madonna.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <script
 src="https://code.jquery.com/jquery-3.3.1.min.js"
 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -11,7 +12,7 @@ crossorigin="anonymous"></script>
 <body>
 <header>
   <div class="top-container">
-    <img class="rogo" src="rogo-tp.png">
+    <a  href="madonna.html"><img class="rogo" src="rogo-tp.png"></a>
     <ul class="menus">
       <a class="menu" href="madonna.html">メニュー</a>
       <a class="menu" href="madonna.html">アクセス</a>
@@ -43,16 +44,42 @@ crossorigin="anonymous"></script>
 <div class="course-intro">
 
 </div>
+
+<footer>
+  <div class="bottom-container">
+    <a  href="madonna.html"><img class="rogo" src="rogo-tp.png"></a>
+    <div class="snses">
+        <a class="sns" target="_blank" href="https://www.instagram.com/madonna_sugi/?hl=ja"><i class="fab fa-instagram"></i></a>
+        <a class="sns" target="_blank" href="https://www.facebook.com/madonna.138/"><i class="fab fa-facebook-square"></i></a>
+    </div>
+  </div>
+</footer>
+
 <script>
 $(function(){
+  //fadeIn of catchy
   $('#catchy').fadeIn(1000,function(){
   $('#catchy').css('display','inline-block');
   });
+  //modal show function
   $('.book').click(function(){
     $('.modal').show();
   });
+  //modal close function
   $('.close').click(function(){
     $('.modal').hide();
+  });
+  //icon hover of sns
+  $('.sns').hover(
+    function(){
+      $(this).css('color','white');
+      $('.snses').css('border','2px solid rgb(241, 75, 75)');
+      $('.snses').css('border-radius','40px');
+    },
+    function(){
+      $(this).css('color','black');
+      $('.snses').css('border','none');
+      $('.snses').css('border-radius','none');
   });
 });
 </script>
