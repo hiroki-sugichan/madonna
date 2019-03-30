@@ -49,8 +49,8 @@ crossorigin="anonymous"></script>
   <div class="bottom-container">
     <a  href="madonna.html"><img class="rogo" src="rogo-tp.png"></a>
     <div class="snses">
-        <a class="sns" target="_blank" href="https://www.instagram.com/madonna_sugi/?hl=ja"><i class="fab fa-instagram"></i></a>
-        <a class="sns" target="_blank" href="https://www.facebook.com/madonna.138/"><i class="fab fa-facebook-square"></i></a>
+        <a class="sns fab fa-instagram" target="_blank" href="https://www.instagram.com/madonna_sugi/?hl=ja"></a>
+        <a class="sns fab fa-facebook-square" target="_blank" href="https://www.facebook.com/madonna.138/"></a>
     </div>
   </div>
 </footer>
@@ -58,7 +58,7 @@ crossorigin="anonymous"></script>
 <script>
 $(function(){
   //fadeIn of catchy
-  $('#catchy').fadeIn(1000,function(){
+  $('#catchy').fadeIn(2500,function(){
   $('#catchy').css('display','inline-block');
   });
   //modal show function
@@ -70,16 +70,14 @@ $(function(){
     $('.modal').hide();
   });
   //icon hover of sns
-  $('.sns').hover(
-    function(){
-      $(this).css('color','white');
-      $('.snses').css('border','2px solid rgb(241, 75, 75)');
-      $('.snses').css('border-radius','40px');
-    },
+  $('.fab').hover(
     function(){
       $(this).css('color','black');
-      $('.snses').css('border','none');
-      $('.snses').css('border-radius','none');
+      $('.bottom-container').css('background-color','rgba(186, 58, 58, 1)');
+    },
+    function(){
+      $(this).css('color','white');
+      $('.bottom-container').css('background-color','rgb(71, 71, 71)');
   });
 });
 </script>
