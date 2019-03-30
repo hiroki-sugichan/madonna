@@ -16,6 +16,7 @@ body{
   padding-top:350px;
   color:white;
   text-align: center;
+  font-size:calc(10px + 1vh);
 }
 /*ここまでパララックス*/
 .modal{
@@ -82,6 +83,7 @@ input[type='submit']:hover{
   position: fixed;
   top:0;
   width:100%;
+  z-index: 1;
 }
 .rogo{
   height:120px;
@@ -106,10 +108,74 @@ input[type='submit']:hover{
   border:3px solid rgba(228, 39, 39, 1);
   border-radius: 10px;
 }
+.book{
+  cursor:pointer;
+}
 /*ここまでヘッダー*/
 .course-intro{
   width:100%;
-  height:400px;
+  height:auto;
+}
+.introduce{
+  text-align: center;
+  color:rgb(43, 43, 43);
+}
+.introduce h3{
+  line-height: 35px;
+}
+.bg-holder{
+  height:360px;
+}
+.on{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.place-image{
+  position:relative;
+  background-position:center center;
+  background-image: url("nice-bg.jpg");
+  height:100%;
+  width:100%;
+  border-radius: 100px;
+  background-size: cover;
+}
+.intro-sentence span{
+  color:rgba(186, 58, 58, 1);
+}
+.intro-sentence{
+  font-size: calc(10px+2vmin);
+  line-height: 35px;
+}
+.btn-wrapper{
+  height: 70px;
+  width:100%;
+}
+.btn{
+  margin: 20px auto;
+  width:140px;
+  font-size:20px;
+  padding:10px 20px;
+  background-color: rgb(71, 71, 71);
+  color:white;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.btn:hover{
+  margin: 20px auto;
+  width:140px;
+  font-size:20px;
+  padding:10px 60px;
+  background-color: rgb(83, 126, 255);
+  color: black;
+  border-radius: 30px;
+  box-shadow: 0px 4px rgb(55, 84, 172);
+}
+.btn:active{
+  box-shadow: none;
+  position: relative;
+  top:4px;
 }
 /*ここまでメイン*/
 footer{
@@ -130,9 +196,9 @@ footer{
 .sns{
   text-decoration: none;
   display: inline-block;
-  width:100px;
+  width:60px;
   list-style: none;
-  padding:10px 30px;
+  margin:10px 30px;
   color:white;
   transition:0.3s
 }
