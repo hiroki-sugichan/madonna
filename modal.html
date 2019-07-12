@@ -87,10 +87,10 @@
         <span class="close">&times;</span>
         <div class="login-form">
           <form class="box" action="confirm.php" method="post">
-            <h1>半径2の球の体積、表面積を求めよ。</h1>
-            <input type="text" name="volume" value="体積">
-            <input type="text" name="surface" value="表面積">
-            <input type="submit" value="答え合わせ">
+            <h1>お客様の情報を入力してください。</h1>
+            <input type="text" name="volume" value="お名前">
+            <input type="text" name="surface" value="コースメニュー">
+            <input type="submit" value="予約する">
           </form>
         </div>
       </div>
@@ -106,12 +106,12 @@
       //Get the <span> element that closes the Modal
       var span = document.getElementsByClassName("close")[0];
 
-      //When the user clicks on the button, open the Modal
+      //open the Modal
       btn.onclick = function(){
         modal.style.display = "block";
       }
 
-      //When the user clicks on <span> (x), close the Modal
+      //close the Modal
         span.onclick = function(){
           modal.style.display = "none";
         }

@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="madonna.css">
+<link rel="stylesheet" href="mdn-responsive.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <script
 src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -12,28 +13,40 @@ crossorigin="anonymous"></script>
 <body>
 <header>
   <div class="top-container">
-    <a  href="madonna.html"><img class="rogo" src="rogo-tp.png" alt="美容室まどんな"></a>
+    <a  href="madonna.php"><img class="rogo" src="rogo-tp.png" alt="美容室まどんな"></a>
     <ul class="menus">
-      <a class="menu" href="madonna.html">メニュー</a>
-      <a class="menu" href="madonna.html">アクセス</a>
+      <a class="menu" href="madonna.php">メニュー</a>
+      <a class="menu" href="madonna.php">アクセス</a>
       <a class="menu book">ご予約</a>
     </ul>
+    <i class="fa fa-bars" aria-hidden="true"></i>
+    <div class="menus-wrapper">
+      <ul class="menus-responsive">
+        <a class="menu-responsive" href="madonna.php">メニュー</a>
+        <a class="menu-responsive" href="madonna.php">アクセス</a>
+        <a class="menu-responsive book">ご予約</a>
+      </ul>
+    </div>
   </div>
 </header>
 
+<!--the modal-->
 <div id="myModal" class="modal">
+
+  <!--Modal content-->
   <div class="modal-content">
     <span class="close">&times;</span>
     <div class="login-form">
       <form class="box" action="confirm.php" method="post">
-        <h1>半径2の球の体積、表面積を求めよ。</h1>
-        <input type="text" name="volume" value="体積">
-        <input type="text" name="surface" value="表面積">
-        <input type="submit" value="答え合わせ">
+        <h1>お客様の情報を入力してください。</h1>
+        <input type="text" name="volume" placeholder="お名前">
+        <input type="text" name="surface" placeholder="コースメニュー">
+        <input type="submit" value="予約する">
       </form>
     </div>
   </div>
 </div>
+
 
 <div class="parallax">
   <div id="catchy">
@@ -60,7 +73,7 @@ crossorigin="anonymous"></script>
 
 <footer>
   <div class="bottom-container">
-    <a  href="madonna.html"><img class="rogo" src="rogo-tp.png" alt="美容室まどんな"></a>
+    <a  href="madonna.php"><img class="rogo" src="rogo-tp.png" alt="美容室まどんな"></a>
     <div class="snses">
         <a class="sns fab fa-instagram" target="_blank" href="https://www.instagram.com/madonna_sugi/?hl=ja"></a>
         <a class="sns fab fa-facebook-square" target="_blank" href="https://www.facebook.com/madonna.138/"></a>
@@ -92,6 +105,12 @@ $(function(){
       $(this).css('color','white');
       $('.bottom-container').css('background-color','rgb(71, 71, 71)');
   });
+  //menus-wrapper show function
+  $('.fa-bars').click(function(){
+    $(this).hide(400);
+    $('.menus-wrapper').show(400);
+    $('.menus-responsive').show(600);
+  })
 });
 </script>
 </body>

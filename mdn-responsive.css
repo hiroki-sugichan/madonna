@@ -1,0 +1,50 @@
+@media screen and (max-width:480px){
+  .menus{
+    display:none;
+  }
+  .fa-bars{
+    font-size:40px;
+    color:white;
+    float:right;
+    height: 120px;
+    margin:auto 20px;
+    padding-top:40px;
+  }
+  .menus-wrapper{
+    display:none;
+    position:absolute;
+    top:-350px;
+    right:-350px;
+    background-color:black;
+    width:700px;
+    height:700px;
+    border-radius: 300px;
+  }
+  .menus-responsive{
+    position: absolute;
+    top:30px;
+    right:30px;
+  }
+  .menu-responsive{
+    color:white;
+  }
+  #catchy{
+    font-size:11px;
+  }
+  .introduce h3{
+    font-size:11px;
+    line-height: normal;
+  }
+  .intro-sentence h4{
+    font-size:11px;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width:481px){
+  .fa-bars{
+    display:none!important;
+  }
+  .menus-wrapper{
+    display: none;
+  }
+}
